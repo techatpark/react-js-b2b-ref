@@ -47,7 +47,8 @@ export const login = async (credentials = {}) => {
     if (data.error) {
         throw (new Error(data.error));
     } else {
-        createLocalstorageItem("token", JSON.stringify({token: data.token, expiry: new Date().getTime() + 60 * 60 * 1000}));
+
+        createLocalstorageItem("token", JSON.stringify({token: data.accessToken, expiry: new Date().getTime() + 60 * 60 * 1000}));
         return {
             success: true,
             data: data
@@ -65,7 +66,7 @@ export const register = async (details = {}) => {
     if (data.error) {
         throw (new Error(data.error));
     } else {
-        createLocalstorageItem("token", JSON.stringify({token: data.token, expiry: new Date().getTime() + 60 * 60 * 1000}));
+        createLocalstorageItem("token", JSON.stringify({token: data.accessToken, expiry: new Date().getTime() + 60 * 60 * 1000}));
         return {
             success: true,
             data: data

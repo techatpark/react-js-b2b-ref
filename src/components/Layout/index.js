@@ -19,7 +19,6 @@ export default function Layout({title, auth=false, authFallback="/login", childr
     const [loading, setLoading] = React.useState(auth);
 
     useEffect(() => {
-        // console.log(loggedIn);
         if(checkToken()){
             setLoggedIn(true);
             setLoading(false);
@@ -38,7 +37,7 @@ export default function Layout({title, auth=false, authFallback="/login", childr
             })
             .then(res => res.json())
             .then(res => {
-                setUserData(res.user);
+                setUserData(res);
             });
         } else {
             setLoading(false);
