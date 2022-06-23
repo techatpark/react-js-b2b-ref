@@ -14,7 +14,7 @@ import Profile from './pages/Profile';
 import About from './pages/About';
 import SecuredPage from './pages/SecuredPage';
 import UnsecredPage from './pages/UnsecuredPage';
-
+import Movie from './pages/Movie';
 
 function App() {
   return (
@@ -34,6 +34,7 @@ function App() {
         </ToastContainer>
           <Router>
             <Switch>
+              <Route exact path="/movie" component = {Movie}/>
               <Route exact path="/about" component={About} />
               <Route exact path="/unsecured-page" component={UnsecredPage} />
               <Route exact path="/secured-page" component={SecuredPage} />

@@ -24,6 +24,11 @@ export default function Nav() {
             name: 'Secured Page',
             route: '/secured-page',
             protected: true,
+        },
+        {
+            name: 'Movie',
+            route: '/movie',
+            protected: true,
         }
     ];
 

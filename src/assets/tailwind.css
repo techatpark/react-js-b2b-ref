@@ -3,3 +3,7 @@
 @import "tailwindcss/components";
 
 @import "tailwindcss/utilities";
+.k_button {
+    top: 6rem;
+    right: 10rem;
+}

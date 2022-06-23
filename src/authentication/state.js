@@ -9,3 +9,7 @@ export const isLoggedIn = atom({
     key: 'isLoggedIn',
     default: false,
 })
+export const movies = atom({
+    key: 'movies',
+    default: [],
+})

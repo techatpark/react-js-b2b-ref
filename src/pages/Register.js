@@ -41,8 +41,8 @@ export default function Register() {
                     draggable: true,
                     progress: undefined,
                     });                
-                setLoggedIn(true);
-                setUser(res.data.user);
+                // setLoggedIn(true);
+                setUser(res.data);
                 setSubmitting(false);
                 history.push('/profile');
             }
@@ -95,9 +95,9 @@ export default function Register() {
                                 </div>
                                 {errors.username && touched.username && errors.username} 
                                 <div>
-                                <input aria-label="Email address" name="email" type="email" required className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:shadow-outline-blue focus:border-blue-300 focus:z-10 sm:text-sm sm:leading-5" placeholder="Email address" onChange={handleChange} onBlur={handleBlur} value={values.username}/>
+                                <input aria-label="Email address" name="email" type="email" required className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:shadow-outline-blue focus:border-blue-300 focus:z-10 sm:text-sm sm:leading-5" placeholder="Email address" onChange={handleChange} onBlur={handleBlur} value={values.email}/>
                                 </div>
-                                {errors.username && touched.username && errors.username}
+                                {errors.email && touched.email && errors.email}
                                 <div className="-mt-px">
                                 <input aria-label="Password" name="password" type="password" required className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:shadow-outline-blue focus:border-blue-300 focus:z-10 sm:text-sm sm:leading-5" placeholder="Password" onChange={handleChange} onBlur={handleBlur} value={values.password}/>
                                 {errors.password && touched.password && errors.password}
